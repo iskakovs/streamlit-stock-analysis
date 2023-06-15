@@ -1,4 +1,4 @@
-# Stock Performance Analyzer
+# Streamlit-based Stock Performance Analyzer
 
 ## Overview
 The Stock Performance Analyzer is a Python project built using the Streamlit framework. It provides a user-friendly web interface for analyzing the performance indicators of various stocks. The project utilizes historical stock price data and computes key metrics, such as moving averages and relative strength index (RSI) to help users make informed investment decisions.
