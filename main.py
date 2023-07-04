@@ -29,6 +29,5 @@ def main():
 
     logger.info('End Main')
 
-
 if __name__ == "__main__":
     main()
