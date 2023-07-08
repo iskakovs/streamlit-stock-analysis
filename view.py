@@ -47,7 +47,6 @@ def config_streamlit(config, db_path):
         st.text_area("Comment", key="comment")
         display_data_table(data)
 
-
     if st.session_state.curr_history:
         record_id = st.session_state.history[st.session_state.history['name'] == st.session_state.curr_history].iloc[0][
             'id']
@@ -61,4 +60,9 @@ def config_streamlit(config, db_path):
                 db_sql.update_record_in_db(db_path, record_id, st.session_state.symbol, st.session_state.start_date,
                                            st.session_state.end_date, st.session_state.name, st.session_state.comment)
                 st.experimental_rerun()
+
+        if btn_delete:
+            db_sql.delete_record_from_db(db_path, record_id)
+            st.experimental_rerun()
+
 
