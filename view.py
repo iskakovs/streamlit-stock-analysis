@@ -37,3 +37,5 @@ def config_streamlit(config, db_path):
                  on_change=restore_from_history)
 
 
+    col1, col2, col3 = st.sidebar.columns(3, gap="small")
+
