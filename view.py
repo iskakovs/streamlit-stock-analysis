@@ -88,5 +88,6 @@ def restore_from_history():
     st.session_state.start_date = pd.to_datetime(selected_row['start_date'])
     st.session_state.end_date = pd.to_datetime(selected_row['end_date'])
     st.session_state.comment = selected_row['comment']
+    st.session_state.name = selected_row['name']
 
 
