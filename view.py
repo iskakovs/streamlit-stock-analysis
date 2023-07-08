@@ -23,3 +23,17 @@ def config_streamlit(config, db_path):
                        layout=config['streamlit_parameters']['layout'],
                        initial_sidebar_state=config['streamlit_parameters']['initial_sidebar_state'])
     st.session_state.history = db_sql.fetch_data_from_db(db_path)
+
+    with st.sidebar:
+        st.text_input("Ticker:", key="symbol")
+        st.date_input("Start date", key="start_date")
+        st.date_input("End date", key="end_date")
+        apply_button = st.button("Apply")
+        st.markdown("---")
+
+        name = st.text_input(label="Manage my recordings", placeholder="Name", key="name")
+
+    st.selectbox("My recordings:", st.session_state.history['name'], key="curr_history",
+                 on_change=restore_from_history)
+
+
