@@ -16,3 +16,6 @@ full_path = os.path.join(os.path.dirname(__file__), toml_file)
     paths = helpers_config.get_toml_data(full_path)
     return paths
 
+# 'get_database_path' takes a database name as a parameter and returns the full path to that database
+
+
