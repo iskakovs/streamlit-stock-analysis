@@ -6,3 +6,6 @@ discard_old_info = true
 
 [streamlit_parameters]
 page_title = 'Stock analyse'
+title = 'Data'
+layout = 'wide'
+initial_sidebar_state = 'expanded'
