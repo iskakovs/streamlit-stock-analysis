@@ -89,5 +89,7 @@ def restore_from_history():
     st.session_state.end_date = pd.to_datetime(selected_row['end_date'])
     st.session_state.comment = selected_row['comment']
     st.session_state.name = selected_row['name']
-
+    logger.info(f'Save_name={st.session_state.name} : Symbol={st.session_state.symbol} - '
+                f'start_date={st.session_state.start_date} - end_date={st.session_state.end_date} - '
+                f'comment={st.session_state.comment}')
 
