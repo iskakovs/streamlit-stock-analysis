@@ -93,3 +93,7 @@ def restore_from_history():
                 f'start_date={st.session_state.start_date} - end_date={st.session_state.end_date} - '
                 f'comment={st.session_state.comment}')
 
+# Here we visualize the graph how the stock SMA and RSI data have changed over time
+# for the period defined in the function 'config_streamlit' above
+def display_graph(data):
+
