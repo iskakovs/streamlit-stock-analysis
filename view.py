@@ -108,3 +108,6 @@ def display_graph(data):
         chart_data = data[['Close', 'SMA', 'RSI']]
         st.line_chart(chart_data)
         logger.info('display graph')
+ else:
+        st.write("No data available")
+        logger.info('No data available to display')
