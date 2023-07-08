@@ -1,2 +1,5 @@
 [initialisation]
 log_file = 'file.log'
+log_level_console = 'DEBUG'
+log_level_file = 'DEBUG'
+discard_old_info = true
