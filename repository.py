@@ -18,4 +18,12 @@ full_path = os.path.join(os.path.dirname(__file__), toml_file)
 
 # 'get_database_path' takes a database name as a parameter and returns the full path to that database
 
+def get_database_path(db_name):
+    """
+    get database path
+    :param db_name: database name
+    :type db_name: str
+    :return: database path
+    :rtype: string
+    """
 
