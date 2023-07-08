@@ -117,3 +117,7 @@ def display_data_table(data):
     :type data: Array
     :return: None
     """
+ if data is not None:
+        st.subheader('Data table')
+        st.write(data)
+        logger.info('display graph')
