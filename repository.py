@@ -13,3 +13,6 @@ def get_config(toml_file='config.toml'):
     :rtype: dict
     """
 full_path = os.path.join(os.path.dirname(__file__), toml_file)
+    paths = helpers_config.get_toml_data(full_path)
+    return paths
+
