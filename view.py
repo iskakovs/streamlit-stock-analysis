@@ -83,5 +83,6 @@ def restore_from_history():
     restore settings from my history
     :return: None
     """
+    selected_row = st.session_state.history[st.session_state.history['name'] == st.session_state.curr_history].iloc[0]
 
 
