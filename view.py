@@ -19,4 +19,3 @@ def config_streamlit(config, db_path):
     :type db_path: string
     :return: None
     """
-  
