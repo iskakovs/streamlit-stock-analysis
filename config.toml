@@ -1,1 +1,2 @@
-
+[initialisation]
+log_file = 'file.log'
