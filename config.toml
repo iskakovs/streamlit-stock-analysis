@@ -11,3 +11,4 @@ layout = 'wide'
 initial_sidebar_state = 'expanded'
 
 [sqlite_parameters]
+database = 'history.db'
