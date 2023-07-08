@@ -105,4 +105,6 @@ def display_graph(data):
     st.title("Stock Price analysis with SMA and RSI Indices")
     if data is not None:
         st.subheader('Closing price - SMA - RSI')
-        
+        chart_data = data[['Close', 'SMA', 'RSI']]
+        st.line_chart(chart_data)
+        logger.info('display graph')
