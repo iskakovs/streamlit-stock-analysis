@@ -77,3 +77,11 @@ def config_streamlit(config, db_path):
                                 st.session_state.name, st.session_state.comment)
             st.experimental_rerun()
 
+
+def restore_from_history():
+    """
+    restore settings from my history
+    :return: None
+    """
+
+
