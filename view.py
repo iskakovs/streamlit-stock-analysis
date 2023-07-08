@@ -96,4 +96,13 @@ def restore_from_history():
 # Here we visualize the graph how the stock SMA and RSI data have changed over time
 # for the period defined in the function 'config_streamlit' above
 def display_graph(data):
-
+    """
+    streamlit : Display graph : Close, SMA, RSI
+    :param data: data to display
+    :type data: Array
+    :return: None
+    """
+    st.title("Stock Price analysis with SMA and RSI Indices")
+    if data is not None:
+        st.subheader('Closing price - SMA - RSI')
+        
