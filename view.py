@@ -47,3 +47,18 @@ def config_streamlit(config, db_path):
         st.text_area("Comment", key="comment")
         display_data_table(data)
 
+
+    if st.session_state.curr_history:
+        record_id = st.session_state.history[st.session_state.history['name'] == st.session_state.curr_history].iloc[0][
+            'id']
+        btn_update = col2.button("Update")
+        btn_delete = col3.button("Suppr.")
+        if btn_update:
+            if name == "":
+                st.sidebar.error("Please, enter the name")
+                logger.error(f'Update button : Empty name')
+            else:
+                db_sql.update_record_in_db(db_path, record_id, st.session_state.symbol, st.session_state.start_date,
+                                           st.session_state.end_date, st.session_state.name, st.session_state.comment)
+                st.experimental_rerun()
+
