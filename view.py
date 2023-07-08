@@ -65,3 +65,15 @@ def config_streamlit(config, db_path):
             db_sql.delete_record_from_db(db_path, record_id)
             st.experimental_rerun()
 
+    if col1.button("Add"):
+        if name == "":
+            st.sidebar.error("Please, enter the name")
+            logger.error(f'Add button : Empty name')
+        elif st.session_state.history[st.session_state.history['name'] == name].shape[0]:
+            st.sidebar.error("This name already exists in the database")
+            logger.error(f'Add button : Name {name} already exist in database')
+        else:
+            db_sql.save_into_db(db_path, st.session_state.symbol, st.session_state.start_date, st.session_state.end_date,
+                                st.session_state.name, st.session_state.comment)
+            st.experimental_rerun()
+
