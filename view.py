@@ -19,3 +19,7 @@ def config_streamlit(config, db_path):
     :type db_path: string
     :return: None
     """
+    st.set_page_config(page_title=config['streamlit_parameters']['page_title'],
+                       layout=config['streamlit_parameters']['layout'],
+                       initial_sidebar_state=config['streamlit_parameters']['initial_sidebar_state'])
+    st.session_state.history = db_sql.fetch_data_from_db(db_path)
