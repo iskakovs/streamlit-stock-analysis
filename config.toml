@@ -9,3 +9,5 @@ page_title = 'Stock analyse'
 title = 'Data'
 layout = 'wide'
 initial_sidebar_state = 'expanded'
+
+[sqlite_parameters]
