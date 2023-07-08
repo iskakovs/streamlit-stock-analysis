@@ -36,9 +36,7 @@ def config_streamlit(config, db_path):
     st.selectbox("My recordings:", st.session_state.history['name'], key="curr_history",
                  on_change=restore_from_history)
 
-
     col1, col2, col3 = st.sidebar.columns(3, gap="small")
-
 
     if apply_button or st.session_state.symbol:
         data = stock_data.fetch_stock_data(st.session_state.symbol, st.session_state.start_date,
@@ -111,3 +109,11 @@ def display_graph(data):
  else:
         st.write("No data available")
         logger.info('No data available to display')
+
+def display_data_table(data):
+    """
+    streamlit : Display data
+    :param data: data to display
+    :type data: Array
+    :return: None
+    """
