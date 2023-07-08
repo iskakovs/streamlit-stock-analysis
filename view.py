@@ -65,4 +65,3 @@ def config_streamlit(config, db_path):
             db_sql.delete_record_from_db(db_path, record_id)
             st.experimental_rerun()
 
-
