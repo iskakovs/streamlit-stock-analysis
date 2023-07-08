@@ -26,4 +26,6 @@ def get_database_path(db_name):
     :return: database path
     :rtype: string
     """
+  path = os.path.join(os.path.dirname(__file__), db_name)
+    return path
 
