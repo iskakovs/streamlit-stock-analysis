@@ -27,7 +27,6 @@ def fetch_stock_data(symbol, start_date, end_date):
         logger.error(f'yf_download | Error: {str(e)}')
         return None
 
-
 # Based on the 'data' variable defined above we define the function 'calculate_indices' to calculate SMA and RSI
 def calculate_indices(data):
     """
