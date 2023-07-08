@@ -39,3 +39,11 @@ def config_streamlit(config, db_path):
 
     col1, col2, col3 = st.sidebar.columns(3, gap="small")
 
+
+    if apply_button or st.session_state.symbol:
+        data = stock_data.fetch_stock_data(st.session_state.symbol, st.session_state.start_date,
+                                           st.session_state.end_date)
+        display_graph(data)
+        st.text_area("Comment", key="comment")
+        display_data_table(data)
+
