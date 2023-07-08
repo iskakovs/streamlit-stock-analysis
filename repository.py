@@ -12,3 +12,4 @@ def get_config(toml_file='config.toml'):
     :return: config information
     :rtype: dict
     """
+full_path = os.path.join(os.path.dirname(__file__), toml_file)
