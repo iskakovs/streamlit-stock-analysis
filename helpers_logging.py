@@ -28,4 +28,6 @@ def init_logging(dir_path, file_log='file.log', console_log_level='CRITICAL', fi
     if discard_old_info:
         with open(path, "w") as f:
             f.write('')
+    console_format = '%(name)s | %(funcName)s | %(levelname)s | %(message)s'
+    logging.basicConfig(level=console_log_level, format=console_format)
 
