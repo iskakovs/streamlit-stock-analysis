@@ -33,3 +33,5 @@ def init_logging(dir_path, file_log='file.log', console_log_level='CRITICAL', fi
     
     file_handler = logging.FileHandler(path)
     file_handler.setLevel(file_log_level)
+    file_format = logging.Formatter('[%(asctime)s] %(funcName)s - %(levelname)s - %(message)s')
+    file_handler.setFormatter(file_format)
