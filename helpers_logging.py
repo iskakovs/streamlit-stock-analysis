@@ -30,4 +30,6 @@ def init_logging(dir_path, file_log='file.log', console_log_level='CRITICAL', fi
             f.write('')
     console_format = '%(name)s | %(funcName)s | %(levelname)s | %(message)s'
     logging.basicConfig(level=console_log_level, format=console_format)
-
+    
+    file_handler = logging.FileHandler(path)
+    file_handler.setLevel(file_log_level)
