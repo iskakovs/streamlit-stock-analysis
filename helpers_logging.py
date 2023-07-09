@@ -38,3 +38,4 @@ def init_logging(dir_path, file_log='file.log', console_log_level='CRITICAL', fi
 
     logger.addHandler(file_handler)
 
+    logger.info(f'init logger | user={os.getlogin()}')
