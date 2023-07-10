@@ -10,3 +10,6 @@ def get_toml_data(path):
     :return: config information
     :rtype: dict
     """
+
+    with open(path, mode="rb") as fp:
+        return tomli.load(fp)
