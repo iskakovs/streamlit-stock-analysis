@@ -137,3 +137,5 @@ def fetch_data_from_db(db_path):
         return df
     except Exception as e:
         logger.error(f'Error: {str(e)}')
+        return None
+        
