@@ -113,3 +113,5 @@ def delete_record_from_db(db_path, record_id):
         c.execute("DELETE FROM myTable WHERE id=?", (int(record_id),))
         conn.commit()
         logger.info(f'delete_record_from_db | Success')
+    except sq.Error as e:
+        logger.error(f'delete_record_from_db | Error={str(e)}')
