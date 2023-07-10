@@ -135,3 +135,5 @@ def fetch_data_from_db(db_path):
         df = pd.DataFrame(data, columns=columns)
         logger.info('Success')
         return df
+    except Exception as e:
+        logger.error(f'Error: {str(e)}')
