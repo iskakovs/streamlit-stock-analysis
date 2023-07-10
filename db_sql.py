@@ -66,3 +66,22 @@ def save_into_db(db_path, symbol, start_date, end_date, name, comment):
         if conn:
             conn.close()
 
+def update_record_in_db(db_path, record_id, symbol, start_date, end_date, name, comment):
+    """
+    update a record
+    :param record_id: record id
+    :type record_id: integer
+    :param db_path: Database path
+    :type db_path: str
+    :param symbol: ticker name
+    :type symbol: str
+    :param start_date: start date
+    :type start_date: date
+    :param end_date: end date
+    :type end_date: date
+    :param name: record name
+    :type name: str
+    :param comment: Comment
+    :type comment: str
+    :return: None
+    """
