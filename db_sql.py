@@ -87,3 +87,8 @@ def update_record_in_db(db_path, record_id, symbol, start_date, end_date, name, 
     """
     conn = sq.connect(db_path)
     c = conn.cursor()
+    try:
+        c.execute("UPDATE myTable SET symbol=?, start_date=?, end_date=?, name=?, comment=? WHERE id=?",
+                  (symbol, start_date, end_date, name, comment, int(record_id)))
+        conn.commit()
+        logger.info(f'update_record_in_db | Success')
