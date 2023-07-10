@@ -94,3 +94,6 @@ def update_record_in_db(db_path, record_id, symbol, start_date, end_date, name, 
         logger.info(f'update_record_in_db | Success')
     except sq.Error as e:
         logger.info(f'update_record_in_db | Error={str(e)}')
+    finally:
+        if conn:
+            conn.close()
