@@ -118,3 +118,12 @@ def delete_record_from_db(db_path, record_id):
     finally:
         if conn:
             conn.close()
+
+def fetch_data_from_db(db_path):
+    """
+    delete a record
+    :param db_path: Path database
+    :type db_path: string
+    :return: Data or None
+    """
+    conn = sq.connect(db_path)
