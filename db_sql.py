@@ -52,3 +52,17 @@ def save_into_db(db_path, symbol, start_date, end_date, name, comment):
     :type comment: str
     :return: None
     """
+    conn = sq.connect(db_path)
+    
+    try:
+        c = conn.cursor()
+        c.execute("INSERT INTO myTable (symbol, start_date, end_date, name, comment) VALUES (?, ?, ?, ?, ?)",
+                  (symbol, start_date, end_date, name, comment))
+        conn.commit()
+        logger.info(f'name={name} | Success')
+    except sq.Error as e:
+        logger.info(f'name={name} | Error={str(e)}')
+    finally:
+        if conn:
+            conn.close()
+
