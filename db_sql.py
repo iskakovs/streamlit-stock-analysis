@@ -27,3 +27,6 @@ def create_myTable(db_path, table_name='myTable'):
                 comment TEXT
             )
         ''')
+        conn.commit()
+        logger.info(f'''table={table_name} | Success''')
+        
