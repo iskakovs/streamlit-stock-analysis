@@ -109,3 +109,7 @@ def delete_record_from_db(db_path, record_id):
     """
     conn = sq.connect(db_path)
     c = conn.cursor()
+    try:
+        c.execute("DELETE FROM myTable WHERE id=?", (int(record_id),))
+        conn.commit()
+        logger.info(f'delete_record_from_db | Success')
