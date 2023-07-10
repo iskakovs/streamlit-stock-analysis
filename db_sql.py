@@ -13,4 +13,6 @@ def create_myTable(db_path, table_name='myTable'):
     :type table_name: string
     :return: None
     """
-  
+
+conn = sq.connect(db_path)
+
