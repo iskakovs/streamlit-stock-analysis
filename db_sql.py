@@ -107,3 +107,5 @@ def delete_record_from_db(db_path, record_id):
     :type db_path: str
     :return: None
     """
+    conn = sq.connect(db_path)
+    c = conn.cursor()
