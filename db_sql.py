@@ -127,3 +127,11 @@ def fetch_data_from_db(db_path):
     :return: Data or None
     """
     conn = sq.connect(db_path)
+    try:
+        c = conn.cursor()
+        c.execute("SELECT id, symbol, start_date, end_date, name, comment FROM myTable")
+        data = c.fetchall()
+        columns = ['id', 'symbol', 'start_date', 'end_date', 'name', 'comment']
+        df = pd.DataFrame(data, columns=columns)
+        logger.info('Success')
+        return df
