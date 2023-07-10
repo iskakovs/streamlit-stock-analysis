@@ -97,3 +97,13 @@ def update_record_in_db(db_path, record_id, symbol, start_date, end_date, name, 
     finally:
         if conn:
             conn.close()
+
+def delete_record_from_db(db_path, record_id):
+    """
+    delete a record
+    :param record_id: record id
+    :type record_id: integer
+    :param db_path: Database path
+    :type db_path: str
+    :return: None
+    """
