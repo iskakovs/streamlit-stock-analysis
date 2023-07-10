@@ -4,3 +4,4 @@ import logging
 
 logger = logging.getLogger()
 
+def create_myTable(db_path, table_name='myTable'):
