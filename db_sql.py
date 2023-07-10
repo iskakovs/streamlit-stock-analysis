@@ -115,3 +115,6 @@ def delete_record_from_db(db_path, record_id):
         logger.info(f'delete_record_from_db | Success')
     except sq.Error as e:
         logger.error(f'delete_record_from_db | Error={str(e)}')
+    finally:
+        if conn:
+            conn.close()
