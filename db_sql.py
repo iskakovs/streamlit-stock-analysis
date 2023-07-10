@@ -34,3 +34,21 @@ def create_myTable(db_path, table_name='myTable'):
     finally:
         if conn:
             conn.close()
+
+def save_into_db(db_path, symbol, start_date, end_date, name, comment):
+    """
+    create a new record into database
+    :param db_path: Database path
+    :type db_path: str
+    :param symbol: ticker name
+    :type symbol: str
+    :param start_date: start date
+    :type start_date: date
+    :param end_date: end date
+    :type end_date: date
+    :param name: record name
+    :type name: str
+    :param comment: Comment
+    :type comment: str
+    :return: None
+    """
