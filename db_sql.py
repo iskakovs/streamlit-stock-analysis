@@ -29,4 +29,8 @@ def create_myTable(db_path, table_name='myTable'):
         ''')
         conn.commit()
         logger.info(f'''table={table_name} | Success''')
-        
+    except Exception as e:
+        logger.error(f'''table={table_name} | Error: {str(e)}''')
+    finally:
+        if conn:
+            conn.close()
