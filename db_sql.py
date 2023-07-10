@@ -85,3 +85,5 @@ def update_record_in_db(db_path, record_id, symbol, start_date, end_date, name, 
     :type comment: str
     :return: None
     """
+    conn = sq.connect(db_path)
+    c = conn.cursor()
