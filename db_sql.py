@@ -138,4 +138,6 @@ def fetch_data_from_db(db_path):
     except Exception as e:
         logger.error(f'Error: {str(e)}')
         return None
-        
+    finally:
+        if conn:
+            conn.close()        
